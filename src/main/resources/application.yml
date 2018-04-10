@@ -1,0 +1,6 @@
+spring:
+  batch:
+    job:
+      enabled: true
+    initializer:
+      enabled: true
