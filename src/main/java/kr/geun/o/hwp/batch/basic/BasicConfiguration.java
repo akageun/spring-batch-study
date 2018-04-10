@@ -25,14 +25,25 @@ public class BasicConfiguration {
 
 	@Bean
 	public Job basicJob() {
-		return jobBuilderFactory.get("basicJob").incrementer(new RunIdIncrementer()).start(basicTaskletStep()).build();
+		//@formatter:off
+		return jobBuilderFactory
+			.get("basicJob")
+				.incrementer(new RunIdIncrementer())
+					.start(basicTaskletStep())
+			.build();
+		//@formatter:on
 	}
 
 	@Bean
 	public Step basicTaskletStep() {
-		return stepBuilderFactory.get("basicTaskletStep").tasklet((stepContribution, chunkContext) -> {
-			System.out.println("test");
-			return null;
-		}).build();
+		//@formatter:off
+		return stepBuilderFactory
+			.get("basicTaskletStep")
+				.tasklet((stepContribution, chunkContext) -> {
+					System.out.println("test");
+					return null;
+				})
+			.build();
+		//@formatter:on
 	}
 }
