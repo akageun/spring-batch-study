@@ -1,6 +1,7 @@
 spring:
   batch:
     job:
-      enabled: true
+      enabled: false
+      #names: BASIC_JOB,MULTI_BASIC_JOB
     initializer:
       enabled: true

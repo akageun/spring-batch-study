@@ -54,6 +54,7 @@
     </dependencies>
 
     <build>
+        <finalName>BATCH_STUDY</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
